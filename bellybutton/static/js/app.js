@@ -1,4 +1,4 @@
-var data = d3.json("https://arnoldmacamos.github.io/bellybutton/samples.json");
+const data = await d3.json("https://arnoldmacamos.github.io/bellybutton/samples.json");
 
 console.log(data);
 //populate dropdown list
