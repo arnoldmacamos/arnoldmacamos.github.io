@@ -1,4 +1,4 @@
-var data = d3.json("samples.json");
+var data = d3.json("../../samples.json");
 
 //populate dropdown list
 var selDataset = d3.select("#selDataset");
