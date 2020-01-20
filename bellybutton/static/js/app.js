@@ -1,4 +1,4 @@
-var data = d3.json("bellybutton/samples.json");
+var data = d3.json("https://arnoldmacamos.github.io/bellybutton/samples.json");
 
 //populate dropdown list
 var selDataset = d3.select("#selDataset");
