@@ -11,7 +11,7 @@ var dataset = d3.json("https://arnoldmacamos.github.io/bellybutton/samples.json"
 		.data(arrNames).enter()
 		.append('option')
 			.text(function (d) { return d; });
-			
+	
 	return data;
 });
 
@@ -22,11 +22,13 @@ function optionChanged(sampleId){
 		var divMetaData = d3.select("#sample-metadata");
 		var divBar = d3.select("#bar");
 		var divBubble = d3.select("#bubble");
+		var divGauge = d3.select("#gauge");
 		
 		//Clear all Sections
 		divMetaData.html("");
 		divBar.html("");
 		divBubble.html("");
+		divGauge.html("");
 			
 		if(sampleId != "Please Select"){
 			
