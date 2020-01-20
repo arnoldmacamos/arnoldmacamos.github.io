@@ -34,7 +34,7 @@ function optionChanged(sampleId){
 			
 			//--- Fill Demographic Info Section ---
 			var metaData = data.metadata.filter(metadata => metadata.id == sampleId)[0];
-			console.log(metaData);	
+			//console.log(metaData);	
 			
 			Object.entries(metaData).forEach(function(elem){
 				divMetaData.append("div").text(`${elem[0]} : ${elem[1]}`);
@@ -48,16 +48,16 @@ function optionChanged(sampleId){
 				var otuValue = {"otu_id": "OTU " + elem, "otu_label": samples.otu_labels[index],  "sample_value": samples.sample_values[index]};
 				arrOtuValues.push(otuValue);
 			});		
-			console.log(arrOtuValues);
+			//console.log(arrOtuValues);
 			
 			
 			//Sort by sample values and get the top 10
 			var sortedOtuValues = arrOtuValues.sort((a, b) => b.sample_value - a.sample_value);
-			console.log(sortedOtuValues);
+			//console.log(sortedOtuValues);
 
 			var topTenOtuValues = sortedOtuValues.slice(0, 10);
 			topTenOtuValues = topTenOtuValues.sort((a, b) => a.sample_value - b.sample_value);
-			console.log(topTenOtuValues);
+			//console.log(topTenOtuValues);
 			
 			var trace1 = {
 			  type: 'bar',
