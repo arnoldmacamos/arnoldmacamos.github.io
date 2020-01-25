@@ -1,6 +1,6 @@
 
 
-var dataset = d3.json("https://arnoldmacamos.github.io/bellybutton/samples.json").then(function(data){
+var dataset = d3.json("./samples.json").then(function(data){
 	//populate dropdown list
 	var selDataset = d3.select("#selDataset");
 
@@ -121,7 +121,7 @@ function optionChanged(sampleId){
 			  };
 
 			var gaugeData = [trace3];
-			var gaugeLayout = {width: 600, height: 450};
+			var gaugeLayout = {width: 500, height: 375};
 			Plotly.newPlot('gauge', gaugeData, gaugeLayout);
 			
 		}		
