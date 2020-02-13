@@ -1,0 +1,174 @@
+
+<html lang="en-us">
+  <head>
+	<title>BREXIT Impact</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  
+    <!-- Leaflet JS & CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+	crossorigin=""></script>
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+	
+  </head>
+  <body>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#" id="mnu_home">Home</a>
+		<h2>REGIONS</h2>
+		<div class="sel_region">	
+		</div>
+		<h2>--------------</h2>
+		<div>
+			<a href="#" id="mnu_map">Show Map</a>			
+		</div>
+	</div>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	<div id="content" class="container">
+		<div id="sec_charts" class="col-sm-12"> 
+			<div class="row">
+			
+				<div id="election_1" class="col-sm-6">
+					<div class="eltitle jumbotron text-center">
+					<h1 class="elname">Election</h1>
+					<p class="elsubtitle">Region</p> 
+					</div>
+					<div id="elsummary_1" class="col-sm-12 btn btn-lg" data-toggle="modal" data-target="#elsummary_1_mod">
+						<img class="img_export"></img>	
+						<div class="modal fade" id="elsummary_1_mod" role="dialog">
+							<div class="modal-dialog modal-lg">
+							  <div class="modal-content">
+								<div class="modal-header">								 
+								  <h4 class="modal-title"></h4>
+								</div>
+								<div class="modal-body" id="elsummary_1_svg">								  
+								</div>
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						</div>					
+					</div>
+					<!--
+					<div id="eldetails_1" class="col-sm-12">						
+					</div>-->
+					<div id="elsample_1" class="col-sm-12  btn btn-lg" data-toggle="modal" data-target="#elsample_1_mod">
+						<img class="img_export"></img>
+						<div class="modal fade" id="elsample_1_mod" role="dialog">
+							<div class="modal-dialog modal-lg">
+							  <div class="modal-content">
+								<div class="modal-header">								 
+								  <h4 class="modal-title"></h4>
+								</div>
+								<div class="modal-body" id="elsample_1_svg">								  
+								</div>
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						</div>					
+					</div>
+				</div>
+				<div id="election_2" class="col-sm-6">
+					<div class="eltitle jumbotron text-center">
+					<h1  class="elname">Election</h1>
+					<p class="elsubtitle">Region</p> 
+					</div>
+					<div id="elsummary_2" class="col-sm-12 btn btn-lg" data-toggle="modal" data-target="#elsummary_2_mod">
+						<img class="img_export"></img>						
+						<div class="modal fade" id="elsummary_2_mod" role="dialog">
+							<div class="modal-dialog modal-lg">
+							  <div class="modal-content">
+								<div class="modal-header">								 
+								  <h4 class="modal-title"></h4>
+								</div>
+								<div class="modal-body" id="elsummary_2_svg">								  
+								</div>
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						</div>						
+					</div>
+					<!--
+					<div id="eldetails_2" class="col-sm-12">						
+					</div>
+					-->
+					<div id="elsample_2" class="col-sm-12 btn btn-lg" data-toggle="modal" data-target="#elsample_2_mod">
+						<img class="img_export"></img>
+						<div class="modal fade" id="elsample_2_mod" role="dialog">
+							<div class="modal-dialog modal-lg">
+							  <div class="modal-content">
+								<div class="modal-header">								 
+								  <h4 class="modal-title"></h4>
+								</div>
+								<div class="modal-body" id="elsample_2_svg">								  
+								</div>
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						</div>														
+					</div>				
+				</div>
+				<div id="election_4" class="col-sm-12">
+					<div id="elcompare_1" class="col-sm-12 btn btn-lg" data-toggle="modal" data-target="#elcompare_1_mod">
+						<img class="img_export"></img>
+						<div class="modal fade" id="elcompare_1_mod" role="dialog">
+							<div class="modal-dialog modal-lg">
+							  <div class="modal-content">
+								<div class="modal-header">								 
+								  <h4 class="modal-title"></h4>
+								</div>
+								<div class="modal-body" id="elcompare_1_svg">								  
+								</div>
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							  </div>
+							</div>
+						</div>		
+					</div>
+				</div>					
+			</div>	
+		</div>
+		<div id="sec_map" class="col-sm-12">
+			<h2>REGION NAME</h2>	
+			<div class="sel_party"><input type=checkbox party_code = "CON">CON &nbsp; &nbsp; 
+				<input type=checkbox party_code = "LAB">LAB &nbsp; &nbsp; 
+				<input type=checkbox party_code = "LD">LD &nbsp; &nbsp; 
+				<input type=checkbox party_code = "Others">Others &nbsp; &nbsp; 
+			</div>
+			<div id="elmap" class="col-sm-12">
+			</div>
+		</div>
+		
+				
+		
+	</div>   
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+	<script type="text/javascript" src="static/js/main.js"></script>
+    <script type="text/javascript" src="static/js/lg_sample.js"></script>
+    <script type="text/javascript" src="static/js/lg_elsummary.js"></script>  
+    <script type="text/javascript" src="static/js/lg_eldetails.js"></script>
+	<script type="text/javascript" src="static/js/lg_elcompare.js"></script>
+	<script type="text/javascript" src="static/js/lg_elcompare2.js"></script> 	
+	<script type="text/javascript" src="static/js/appstart.js"></script>		
+  </body>
+</html>
