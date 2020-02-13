@@ -17,6 +17,9 @@ function renderSummary(objReportBrexit, objReportNatlElec, filterRegion){
       var data1 = [{
         values: arrValues1,
         labels: arrLabels1,
+        hole: 0.6,       
+        rotation: 90,       
+        direction: "clockwise",
         type: 'pie'
       }];
       
@@ -59,6 +62,9 @@ function renderSummary(objReportBrexit, objReportNatlElec, filterRegion){
   var data2 = [{
     values: arrValues2,
     labels: arrLabels2,
+    hole: 0.6,       
+    rotation: 90,       
+    direction: "clockwise",
     type: 'pie'
   }];
   
